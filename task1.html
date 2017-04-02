@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IFE JavaScript Task 01</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		main{
+			width:400px;
+			height:100px;
+			margin:100px auto;
+			padding:30px;
+			border:5px solid pink;
+			border-radius:10px;
+			font-family:"微软雅黑"
+		}
+		div{
+			margin-top:30px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<label for="aqi-input">
+			<input type="text" id="aqi-input">
+		</label>
+		<button id="button">
+			确认填写
+		</button>
+		<div>
+			您输入的值为：<span id="aqi-display">尚未录入</span>
+		</div>
+	</main>
+	<script type="text/javascript">
+		(function(){
+			var inputbox = document.getElementById("aqi-input");
+			var displaybox = document.getElementById("aqi-display");
+			var buttonbox = document.getElementById("button");
+			buttonbox.onclick = function(){
+				displaybox.innerHTML = inputbox.value;
+			}
+		})();
+	</script>
+</body>
+</html>
